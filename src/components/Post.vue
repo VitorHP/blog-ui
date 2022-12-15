@@ -1,27 +1,30 @@
 <template>
   <div class="post">
-    <div class="post__text">{{ text }}</div>
+    <component :is="component" :text="post.text" :src="post.src" />
     <when />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import When from "./post/when.vue";
+import When from "./post/When.vue";
+import Image from "./post/Image.vue";
+import Text from "./post/Text.vue";
+
 export default {
-  components: { When },
+  components: { When, Image, Text },
   props: {
-    text: {
-      type: String,
+    post: {
+      type: Object,
     },
   },
-  setup() {
+  setup(props) {
     const theme = ref({
       color: "black",
     });
 
     return {
-      theme,
+      component: props.post.text ? "Text" : "Image",
     };
   },
 };
@@ -29,19 +32,13 @@ export default {
 
 <style scoped>
 .post {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 15px;
-  margin-right: 1rem;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
   margin-bottom: 1rem;
-  width: 24rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.post__text {
-  color: v-bind("theme.color");
+  break-inside: avoid;
+  border: 1px solid rgb(151, 205, 164);
+  border-radius: 10px;
+  overflow: hidden;
 }
 </style>

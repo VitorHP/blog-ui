@@ -8,7 +8,7 @@ export default {};
 
 <style scoped>
 .when {
-  margin-top: 0.3rem;
+  margin: 0.3rem 1rem 0.5rem 1rem;
   font-weight: bold;
   font-size: 0.8rem;
   color: #aaa;
