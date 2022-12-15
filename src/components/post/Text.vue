@@ -1,5 +1,5 @@
 <template>
-  <div class="text">{{ text }}</div>
+  <div class="text card-content">{{ text }}</div>
 </template>
 
 <script>
@@ -8,9 +8,4 @@ export default {
 };
 </script>
 
-<style>
-.text {
-  /* color: v-bind("theme.color"); */
-  padding: 1rem;
-}
-</style>
+<style></style>

@@ -27,4 +27,16 @@ export default {
   column-count: 3;
   column-gap: 20px;
 }
+
+@media only screen and (max-width: 960px) {
+  .bubble {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bubble {
+    column-count: 1;
+  }
+}
 </style>

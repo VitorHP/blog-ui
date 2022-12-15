@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post card">
     <component :is="component" :text="post.text" :src="post.src" />
     <when />
   </div>
@@ -19,10 +19,6 @@ export default {
     },
   },
   setup(props) {
-    const theme = ref({
-      color: "black",
-    });
-
     return {
       component: props.post.text ? "Text" : "Image",
     };
@@ -37,8 +33,6 @@ export default {
   grid-template-rows: 1fr auto;
   margin-bottom: 1rem;
   break-inside: avoid;
-  border: 1px solid #ccc;
-  border-radius: 10px;
   overflow: hidden;
 }
 </style>

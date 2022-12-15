@@ -1,6 +1,5 @@
 <template>
-  <div class="home-view">
-    <Form />
+  <div class="home-view container">
     <Bubble />
   </div>
 </template>
@@ -16,10 +15,4 @@ export default {
 Form;
 </script>
 
-<style>
-.home-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<style></style>

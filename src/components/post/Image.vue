@@ -1,6 +1,8 @@
 <template>
-  <div class="post__image">
-    <img :src="src" />
+  <div class="post__image card-image">
+    <figure class="image">
+      <img :src="src" />
+    </figure>
   </div>
 </template>
 
@@ -10,13 +12,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.post__image {
-  max-height: 30rem;
-  overflow: hidden;
-}
-
-img {
-  width: 100%;
-}
-</style>
+<style scoped></style>

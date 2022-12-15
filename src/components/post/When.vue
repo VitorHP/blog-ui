@@ -1,5 +1,5 @@
 <template>
-  <div class="when">Há 10 meses</div>
+  <time class="when">Há 10 meses</time>
 </template>
 
 <script>
