@@ -29,7 +29,6 @@ export default {
 
 <style scoped>
 .post {
-  display: inline-block;
   background-color: white;
   padding: 1rem;
   border-radius: 15px;

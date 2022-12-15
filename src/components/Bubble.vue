@@ -1,22 +1,29 @@
 <template>
   <div class="bubble">
-    <Post v-for="post in posts" :text="post.text" />
+    <component v-for="post in posts" :is="post.component" :text="post.text" />
   </div>
 </template>
 
 <script>
 import { useBubbleStore } from "../stores/bubble";
 import Post from "./Post.vue";
+import Image from "./Image.vue";
 
 export default {
   components: {
     Post,
+    Image,
   },
   setup() {
     const store = useBubbleStore();
 
+    const comps = store.posts.map((post) => ({
+      ...post,
+      component: post.text ? "Post" : "Image",
+    }));
+
     return {
-      posts: store.posts,
+      posts: comps,
     };
   },
 };
