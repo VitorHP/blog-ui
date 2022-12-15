@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 
 export const useBubbleStore = defineStore("bubble", () => {
   return {
+    newPost: {},
     posts: [
       {
         text: "this is a small post",

@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import When from "./post/When.vue";
 import Image from "./post/Image.vue";
 import Text from "./post/Text.vue";

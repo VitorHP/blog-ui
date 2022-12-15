@@ -1,5 +1,6 @@
 <template>
   <div class="home-view container">
+    <Form />
     <Bubble />
   </div>
 </template>
