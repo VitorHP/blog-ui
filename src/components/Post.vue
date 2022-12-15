@@ -37,7 +37,7 @@ export default {
   grid-template-rows: 1fr auto;
   margin-bottom: 1rem;
   break-inside: avoid;
-  border: 1px solid rgb(151, 205, 164);
+  border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
 }

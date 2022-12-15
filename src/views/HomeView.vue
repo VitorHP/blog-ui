@@ -1,13 +1,25 @@
 <template>
-  <Bubble />
+  <div class="home-view">
+    <Form />
+    <Bubble />
+  </div>
 </template>
 
 <script>
 import Bubble from "../components/Bubble.vue";
+import Form from "../components/Form.vue";
 
 export default {
-  components: { Bubble },
+  components: { Bubble, Form },
 };
+
+Form;
 </script>
 
-<style></style>
+<style>
+.home-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
