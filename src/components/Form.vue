@@ -1,7 +1,7 @@
 <template>
-  <div class="form">
+  <div class="form" v-if="!formIsOpen">
     <div class="buttons">
-      <button class="button">
+      <button class="button" @click="toggleForm">
         <span class="icon is-small"> </span>
       </button>
       <button class="button">
@@ -9,14 +9,28 @@
       </button>
     </div>
   </div>
-  <new-post />
+  <new-post v-if="formIsOpen" @submit="createPost" @close="toggleForm" />
 </template>
 
 <script>
+import { useBubbleStore } from "../stores/bubble";
 import NewPost from "./form/NewPost.vue";
+import { ref } from "vue";
 
 export default {
   components: { NewPost },
+  setup(props) {
+    const store = useBubbleStore();
+    let formIsOpen = ref(false);
+
+    const toggleForm = () => (formIsOpen.value = !formIsOpen.value);
+
+    return {
+      createPost: store.createPost,
+      toggleForm,
+      formIsOpen,
+    };
+  },
 };
 </script>
 

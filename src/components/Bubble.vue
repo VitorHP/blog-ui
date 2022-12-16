@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { storeToRefs } from "pinia";
 import { useBubbleStore } from "../stores/bubble";
 import Post from "./Post.vue";
 
@@ -14,9 +15,10 @@ export default {
   },
   setup() {
     const store = useBubbleStore();
+    const { typedPosts } = storeToRefs(store);
 
     return {
-      posts: store.posts,
+      posts: typedPosts,
     };
   },
 };

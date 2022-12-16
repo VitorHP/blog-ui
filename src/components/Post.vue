@@ -1,6 +1,6 @@
 <template>
   <div class="post card">
-    <component :is="component" :text="post.text" :src="post.src" />
+    <component :is="post.type" :text="post.text" :src="post.src" />
     <when />
   </div>
 </template>
@@ -9,6 +9,7 @@
 import When from "./post/When.vue";
 import Image from "./post/Image.vue";
 import Text from "./post/Text.vue";
+import { onUpdated, ref } from "vue";
 
 export default {
   components: { When, Image, Text },
@@ -17,11 +18,7 @@ export default {
       type: Object,
     },
   },
-  setup(props) {
-    return {
-      component: props.post.text ? "Text" : "Image",
-    };
-  },
+  setup(props) {},
 };
 </script>
 

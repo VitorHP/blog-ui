@@ -1,14 +1,37 @@
 <template>
   <div class="new-post box">
-    <textarea class="textarea" placeholder="Bota pra fora" rows="5"></textarea>
+    <textarea
+      class="textarea"
+      placeholder="Bota pra fora"
+      rows="5"
+      @keyup.enter="submit"
+    ></textarea>
     <div class="controls">
-      <button class="button is-white is-small">Fechar</button>
+      <button class="button is-white is-small" @click="$emit('close')">
+        Fechar
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  emits: ["submit", "close"],
+  setup(props, ctx) {
+    const submit = (event) => {
+      if (!event.ctrlKey) {
+        return;
+      }
+
+      ctx.emit("submit", event.target.value);
+      ctx.emit("close");
+    };
+
+    return {
+      submit,
+    };
+  },
+};
 </script>
 
 <style scoped>
