@@ -1,5 +1,6 @@
 <template>
-  <div class="post card" :class="{ pinned: post.pinned }">
+  <div class="post card">
+    <decoration v-if="post.decoration" />
     <component :is="post.type" :content="post.content" />
     <when />
   </div>
@@ -11,9 +12,10 @@ import Image from "./post/Image.vue";
 import Text from "./post/Text.vue";
 import Video from "./post/Video.vue";
 import Bio from "./post/Bio.vue";
+import Decoration from "./post/Decoration.vue";
 
 export default {
-  components: { When, Image, Text, Video, Bio },
+  components: { When, Image, Text, Video, Bio, Decoration },
   props: {
     post: {
       type: Object,
@@ -30,10 +32,5 @@ export default {
   grid-template-rows: 1fr auto;
   margin-bottom: 1rem;
   break-inside: avoid;
-  overflow: hidden;
-}
-
-.post.pinned {
-  border-top: 5px solid #9b7fc4;
 }
 </style>

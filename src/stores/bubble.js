@@ -5,7 +5,7 @@ export const useBubbleStore = defineStore("bubble", {
     return {
       posts: [
         {
-          pinned: true,
+          decoration: "vine-top-left",
           content: {
             picture: "images/bio.jpg",
             name: "Vitor Bittencourt",
@@ -20,7 +20,7 @@ export const useBubbleStore = defineStore("bubble", {
           type: "bio",
         },
         {
-          content: "images/image3.jpg",
+          content: "images/image1.jpg",
           type: "image",
           when: "Há 4 meses",
         },
