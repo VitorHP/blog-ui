@@ -1,5 +1,5 @@
 <template>
-  <img class="decoration" src="images/decorations/vine-top-left.png" />
+  <img class="decoration" src="/images/decorations/vine-top-left.png" />
 </template>
 
 <script>
