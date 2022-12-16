@@ -4,7 +4,8 @@ set -e
 # build
 npm run build
 # navigate into the build output directory
-mv dist docs
+rm -rf docs
+cp -r dist docs
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 git add -A

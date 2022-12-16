@@ -1,6 +1,5 @@
 <template>
   <div class="home-view container">
-    <Form />
     <Bubble />
   </div>
 </template>
@@ -10,7 +9,7 @@ import Bubble from "../components/Bubble.vue";
 import Form from "../components/Form.vue";
 
 export default {
-  components: { Bubble, Form },
+  components: { Bubble },
 };
 
 Form;
