@@ -2,22 +2,18 @@
   <div class="card-content">
     <div class="bio-top">
       <figure class="image is-96x96">
-        <img :src="content.picture" />
+        <img :src="data.picture" />
       </figure>
       <div class="profile">
-        <strong class="content">{{ content.name }}</strong>
-        <div class="role">{{ content.role }}</div>
-        <div class="content">{{ content.email }}</div>
+        <strong class="content">{{ data.name }}</strong>
+        <div class="role">{{ data.role }}</div>
+        <div class="content">{{ data.email }}</div>
       </div>
     </div>
     <div class="social-links">
       <strong class="social is-small">Social</strong>
       <div class="links">
-        <a
-          v-for="(url, site) in content.socialLinks"
-          :href="url"
-          target="_blank"
-        >
+        <a v-for="(url, site) in data.socialLinks" :href="url" target="_blank">
           <span class="icon is-large">
             <i :class="brandIconClass(site)"></i>
           </span>
@@ -29,7 +25,7 @@
 
 <script>
 export default {
-  props: ["content"],
+  props: ["data"],
   setup(props) {
     const brandIconClass = (name) => `fa-brands fa-2x fa-${name}`;
 

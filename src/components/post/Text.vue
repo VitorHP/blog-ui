@@ -1,10 +1,10 @@
 <template>
-  <div class="text card-content">{{ content }}</div>
+  <div class="text card-content">{{ data }}</div>
 </template>
 
 <script>
 export default {
-  props: ["content"],
+  props: ["data"],
 };
 </script>
 

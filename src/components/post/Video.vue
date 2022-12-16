@@ -2,7 +2,7 @@
   <div class="video">
     <div class="post__image card-image">
       <figure class="image">
-        <div v-html="content"></div>
+        <div v-html="data"></div>
       </figure>
     </div>
   </div>
@@ -10,11 +10,7 @@
 
 <script>
 export default {
-  props: {
-    content: {
-      type: String,
-    },
-  },
+  props: ["data"],
 };
 </script>
 

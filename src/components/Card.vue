@@ -1,7 +1,7 @@
 <template>
   <div class="post card">
     <decoration v-if="post.decoration" />
-    <component :is="post.type" :content="post.content" />
+    <component v-for="c in post.content" :is="c.type" :data="c.data" />
     <when />
   </div>
 </template>
