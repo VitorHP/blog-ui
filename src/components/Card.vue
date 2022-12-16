@@ -30,5 +30,6 @@ export default {
   margin-bottom: 1rem;
   break-inside: avoid;
   overflow: hidden;
+  border-bottom: 5px solid #9b7fc4;
 }
 </style>
