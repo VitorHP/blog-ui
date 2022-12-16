@@ -6,8 +6,8 @@ npm run build
 # navigate into the build output directory
 rm -rf docs
 cp -r dist docs
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+cp CNAME docs
+
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:vitorhp/blog-ui.git master
