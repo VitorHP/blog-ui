@@ -11,11 +11,11 @@
       </div>
     </div>
     <div class="social-links">
-      <strong class="is-small">Social</strong>
+      <strong class="social is-small">Social</strong>
       <div class="links">
         <a v-for="(url, site) in content.socialLinks" :href="url">
-          <span class="icon">
-            <i></i>
+          <span class="icon is-large">
+            <i :class="brandIconClass(site)"></i>
           </span>
         </a>
       </div>
@@ -26,6 +26,13 @@
 <script>
 export default {
   props: ["content"],
+  setup(props) {
+    const brandIconClass = (name) => `fa-brands fa-2x fa-${name}`;
+
+    return {
+      brandIconClass,
+    };
+  },
 };
 </script>
 
@@ -52,9 +59,18 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .links a {
   margin: 0 1rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.icon {
+  background-color: #3c2b55;
+  border-radius: 25px;
+  overflow: hidden;
 }
 </style>
