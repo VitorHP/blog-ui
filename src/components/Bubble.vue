@@ -1,17 +1,17 @@
 <template>
   <div class="bubble">
-    <Post v-for="post in posts" :post="post" />
+    <Card v-for="post in posts" :post="post" />
   </div>
 </template>
 
 <script>
 import { storeToRefs } from "pinia";
 import { useBubbleStore } from "../stores/bubble";
-import Post from "./Post.vue";
+import Card from "./Card.vue";
 
 export default {
   components: {
-    Post,
+    Card,
   },
   setup() {
     const store = useBubbleStore();
