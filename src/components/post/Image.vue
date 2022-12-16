@@ -1,14 +1,14 @@
 <template>
   <div class="post__image card-image">
     <figure class="image">
-      <img :src="src" />
+      <img :src="content" />
     </figure>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["src"],
+  props: ["content"],
 };
 </script>
 

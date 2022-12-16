@@ -5,56 +5,41 @@ export const useBubbleStore = defineStore("bubble", {
     return {
       posts: [
         {
-          text: "this is a small post",
+          pinned: true,
+          content: {
+            picture: "images/bio.jpg",
+            name: "Vitor Bittencourt",
+            role: "Illustrator | Concept Artist",
+            email: "vitorhp2@gmail.com",
+            socialLinks: {
+              instagram: "https://www.instagram.com/sambarilov_/",
+              artstation: "https://www.artstation.com/sambarilov",
+              twitter: "https://twitter.com/sambarilov",
+            },
+          },
+          type: "bio",
+        },
+        {
+          content: "images/image3.jpg",
+          type: "image",
           when: "Há 4 meses",
         },
         {
-          text: "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
+          content:
+            "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
+          type: "text",
           when: "Há 4 meses",
         },
         {
-          text: "this is a small post",
+          content: "this is a small post",
           when: "Há 4 meses",
+          type: "text",
         },
         {
-          src: "images/image3.jpg",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a small post",
-          when: "Há 4 meses",
-        },
-        {
-          src: "images/image1.jpg",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a small post",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a small post",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
-          when: "Há 4 meses",
-        },
-        {
-          src: "images/image2.jpg",
-          when: "Há 4 meses",
-        },
-        {
-          text: "this is a small post",
-          when: "Há 4 meses",
+          content:
+            '<iframe width="100%" height="315" src="https://www.youtube.com/embed/aeWyp2vXxqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          when: "Agora mesmo",
+          type: "video",
         },
       ],
     };
@@ -63,7 +48,6 @@ export const useBubbleStore = defineStore("bubble", {
     typedPosts: (state) => {
       return state.posts.map((post) => ({
         ...post,
-        type: post.text ? "Text" : "Image",
       }));
     },
   },

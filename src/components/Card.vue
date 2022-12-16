@@ -1,6 +1,6 @@
 <template>
-  <div class="post card">
-    <component :is="post.type" :text="post.text" :src="post.src" />
+  <div class="post card" :class="{ pinned: post.pinned }">
+    <component :is="post.type" :content="post.content" />
     <when />
   </div>
 </template>
@@ -9,10 +9,11 @@
 import When from "./post/When.vue";
 import Image from "./post/Image.vue";
 import Text from "./post/Text.vue";
-import { onUpdated, ref } from "vue";
+import Video from "./post/Video.vue";
+import Bio from "./post/Bio.vue";
 
 export default {
-  components: { When, Image, Text },
+  components: { When, Image, Text, Video, Bio },
   props: {
     post: {
       type: Object,
@@ -30,6 +31,9 @@ export default {
   margin-bottom: 1rem;
   break-inside: avoid;
   overflow: hidden;
-  border-bottom: 5px solid #9b7fc4;
+}
+
+.post.pinned {
+  border-top: 5px solid #9b7fc4;
 }
 </style>
