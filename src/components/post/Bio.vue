@@ -13,7 +13,11 @@
     <div class="social-links">
       <strong class="social is-small">Social</strong>
       <div class="links">
-        <a v-for="(url, site) in content.socialLinks" :href="url">
+        <a
+          v-for="(url, site) in content.socialLinks"
+          :href="url"
+          target="_blank"
+        >
           <span class="icon is-large">
             <i :class="brandIconClass(site)"></i>
           </span>
