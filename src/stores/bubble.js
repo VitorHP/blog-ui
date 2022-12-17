@@ -60,7 +60,7 @@ export const useBubbleStore = defineStore("bubble", {
               type: "text",
             },
             {
-              data: "images/kabuto/kabuto.png",
+              data: "images/kabuto/kabuto.jpg",
               type: "image",
             },
             {

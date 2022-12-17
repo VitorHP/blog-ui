@@ -1,6 +1,6 @@
 <template>
   <div class="title-image">
-    <Image :data="data" />
+    <Image :data="data" :canZoom="false" />
   </div>
 </template>
 

@@ -23,11 +23,23 @@
 import { ref } from "vue";
 
 export default {
-  props: ["data"],
+  props: {
+    data: {
+      type: String,
+    },
+    canZoom: {
+      type: Boolean,
+      default: true,
+    },
+  },
   setup(props) {
     const modalIsActive = ref(false);
 
     const toggleModal = () => {
+      if (!props.canZoom) {
+        return;
+      }
+
       modalIsActive.value = !modalIsActive.value;
     };
 
