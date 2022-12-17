@@ -56,15 +56,47 @@ export const useBubbleStore = defineStore("bubble", {
               type: "title",
             },
             {
-              data: "Exercício para a aula de character design da ICS. Era pra ser só um guerreiro besouro genérico, mas curti tanto que resolvi tentar buscar alguma coisa a mais.",
+              data: "Exercício para a aula de character design da ICS. Era pra ser só um guerreiro besouro genérico, mas eu achei que valia a pena explorar alguma coisa a mais.",
               type: "text",
             },
             {
-              data: "images/kabuto/kabuto.jpg",
+              data: "images/kabuto/kabuto-1.jpg",
               type: "image",
             },
             {
-              data: "this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much this is a very very big post man this one is really big ain't it? what do you think? what a post. yeah maybe not so much",
+              data: "images/kabuto/kabuto-2.jpg",
+              type: "image",
+            },
+            {
+              data: "Parei pra pensar um pouquinho e cheguei numa história onde ele seria uma espécie de espadachim de um shogunato de besouros que foi arruinado por aranhas. Então ele seria um caçador de aranhas.",
+              type: "text",
+            },
+            {
+              data: "Com isso aí na cabeça eu comecei a explorar umas opções de vestimenta que contassem melhor a história.",
+              type: "text",
+            },
+            {
+              data: "images/kabuto/kabuto-3.jpg",
+              type: "image",
+            },
+            {
+              data: "Escolhida a segunda a opção eu decidir que o colar que ele usa seria feito de ovos das aranhas que ele mata e as roupas feitas de teias. Eu tb dei uma lida sobre que animais são predadores de aranha e fiz uma espada com tema de vespa e outra de escorpião.",
+              type: "text",
+            },
+            {
+              data: "images/kabuto/kabuto-4.jpg",
+              type: "image",
+            },
+            {
+              data: "Esse embaixo tá o boneco pronto.",
+              type: "text",
+            },
+            {
+              data: "images/kabuto/kabuto-final.jpg",
+              type: "image",
+            },
+            {
+              data: "Valeu valeu o/",
               type: "text",
             },
             {
