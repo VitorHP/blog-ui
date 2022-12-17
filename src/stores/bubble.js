@@ -88,7 +88,7 @@ export const useBubbleStore = defineStore("bubble", {
               type: "image",
             },
             {
-              data: "Esse embaixo tá o boneco pronto.",
+              data: "E xablau",
               type: "text",
             },
             {
