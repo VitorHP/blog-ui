@@ -7,7 +7,7 @@
       <div class="profile">
         <strong class="content">{{ data.name }}</strong>
         <div class="role">{{ data.role }}</div>
-        <div class="content">{{ data.email }}</div>
+        <div class="content email">{{ data.email }}</div>
       </div>
     </div>
     <div class="social-links">
@@ -66,6 +66,10 @@ export default {
   margin: 0 1rem;
   border-radius: 25px;
   color: white;
+  z-index: 2;
+}
+
+.email {
   z-index: 2;
 }
 
