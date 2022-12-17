@@ -1,15 +1,20 @@
 <template>
-  <div class="post__title">{{ text }}</div>
+  <div class="title-image">
+    <Image :data="data" />
+  </div>
 </template>
 
 <script>
+import Image from "./Image.vue";
+
 export default {
-  props: {
-    text: {
-      type: String,
-    },
-  },
+  props: ["data"],
+  components: { Image },
 };
 </script>
 
-<style></style>
+<style>
+.title-image {
+  margin-top: 1rem;
+}
+</style>

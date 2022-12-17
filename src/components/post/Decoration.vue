@@ -1,17 +1,25 @@
 <template>
-  <img class="decoration" src="/images/decorations/vine-top-left.png" />
+  <img class="decoration" :src="data" />
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["data"],
+};
 </script>
 
 <style scoped>
 .decoration {
   position: absolute;
-  top: -1.5rem;
-  left: -1.2rem;
-  width: 260px;
+  max-width: none;
+  width: calc(113%);
+  transform: translate(-6%, -7%);
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .decoration {
+    column-count: 1;
+  }
 }
 </style>

@@ -66,6 +66,7 @@ export default {
   margin: 0 1rem;
   border-radius: 25px;
   color: white;
+  z-index: 2;
 }
 
 .icon {

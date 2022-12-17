@@ -5,7 +5,7 @@ export const useBubbleStore = defineStore("bubble", {
     return {
       posts: [
         {
-          decoration: "vine-top-left",
+          decoration: "/images/decorations/vine.png",
           content: [
             {
               type: "bio",
@@ -27,7 +27,40 @@ export const useBubbleStore = defineStore("bubble", {
         {
           content: [
             {
-              data: "images/image1.jpg",
+              data: "images/sketches/title.png",
+              type: "title",
+            },
+            {
+              data: "Anatomia esquisita edition",
+              type: "text",
+            },
+            {
+              data: "images/sketches/image2.jpg",
+              type: "image",
+            },
+            {
+              data: "images/sketches/image3.jpg",
+              type: "image",
+            },
+            {
+              data: "images/sketches/image1.jpg",
+              type: "image",
+            },
+          ],
+        },
+        {
+          decoration: "/images/kabuto/decoration.png",
+          content: [
+            {
+              data: "images/kabuto/title.png",
+              type: "title",
+            },
+            {
+              data: "Exercício para a aula de character design da ICS. Era pra ser só um guerreiro besouro genérico, mas curti tanto que resolvi tentar buscar alguma coisa a mais.",
+              type: "text",
+            },
+            {
+              data: "images/kabuto/kabuto.png",
               type: "image",
             },
             {
@@ -35,8 +68,8 @@ export const useBubbleStore = defineStore("bubble", {
               type: "text",
             },
             {
-              data: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/aeWyp2vXxqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-              type: "video",
+              data: "images/kabuto/eggs.png",
+              type: "image",
             },
           ],
         },

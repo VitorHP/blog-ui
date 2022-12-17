@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .bubble {
   column-count: 3;
-  column-gap: 20px;
+  column-gap: 30px;
 }
 
 @media only screen and (max-width: 960px) {

@@ -1,6 +1,6 @@
 <template>
   <div class="post card">
-    <decoration v-if="post.decoration" />
+    <decoration v-if="post.decoration" :data="post.decoration" />
     <component v-for="c in post.content" :is="c.type" :data="c.data" />
     <when />
   </div>
@@ -13,9 +13,10 @@ import Text from "./post/Text.vue";
 import Video from "./post/Video.vue";
 import Bio from "./post/Bio.vue";
 import Decoration from "./post/Decoration.vue";
+import Title from "./post/Title.vue";
 
 export default {
-  components: { When, Image, Text, Video, Bio, Decoration },
+  components: { When, Image, Text, Video, Bio, Decoration, Title },
   props: {
     post: {
       type: Object,
